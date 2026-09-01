@@ -88,6 +88,7 @@ from sklearn.ensemble import(
     AdaBoostRegressor,
     ExtraTreesClassifier,
     BaggingClassifier,
+    BaggingRegressor,
     VotingClassifier,
     VotingRegressor,
     StackingClassifier,
