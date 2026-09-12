@@ -1,0 +1,25 @@
+### conda commands cheatsheet ###
+
+
+# create an environment with specific python version
+conda create --name (environment name) python=(python version)
+
+
+# updating conda to latest version
+conda update -n base -c defaults conda
+
+
+# activating an environment 
+conda activate (environment name)
+
+
+# installing more packages later
+conda install (package name)
+
+
+# list all conda environments 
+conda env list
+
+
+# creating an environment from a .yml file
+conda create --file (name-of-file.yml)
