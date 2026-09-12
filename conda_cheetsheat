@@ -23,3 +23,7 @@ conda env list
 
 # creating an environment from a .yml file
 conda create --file (name-of-file.yml)
+
+
+# remove an environment
+conda remove --name (environment name) --all -y
