@@ -1,4 +1,6 @@
+---------------------------------
 ### conda commands cheatsheet ###
+-----------------------------------
 
 
 # create an environment with specific python version
@@ -29,6 +31,14 @@ conda create --file (name-of-file.yml)
 conda remove --name (environment name) --all -y
 
 
+# list Jupyter kernels
+jupyter kernelspec list
+
+
+# remove jupyter kernel
+jupyter kernelspec remove (name of kernel)
+
+
 #####--------------------------------------------------- #####
 #### PyTorch environment with CUDA 12.8 for Blackwell GPU: ###
 #####--------------------------------------------------- #####
@@ -56,3 +66,10 @@ if torch.cuda.is_available():
     print()
     print(torch.cuda.get_arch_list())  # Verify 'sm_120' is in this list
     print(torch.randn(1).cuda())
+
+
+#####--------------------------------------------------- #####
+#### PyTorch environment for Intel Arc GPU: ###
+#####--------------------------------------------------- #####
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/xpu
