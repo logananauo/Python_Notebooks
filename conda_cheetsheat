@@ -23,6 +23,9 @@ conda create --file (name-of-file.yml)
 # remove an environment
 conda remove --name (environment name) --all -y
 
+# rename an environment
+conda rename -n old_env_name new_env_name
+
 # list Jupyter kernels
 jupyter kernelspec list
 
