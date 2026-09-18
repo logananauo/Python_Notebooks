@@ -1,2 +1,1 @@
-# Python_Notebooks
-Repo consisting of different python programming methods and techniques I've learned over the years, primarily for data science and scientific computing.
+This repository is where I keep some notes on the different techniques in Python I've learned, since it was first introduced to me in an undergraduate geoscience class in 2018. It began with simple arrays and plots, now my latest is learning the magic of neural networks for deep learning. I refer to this when I need a quick cloud-based review.
