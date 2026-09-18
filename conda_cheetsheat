@@ -109,3 +109,24 @@ def get_device():
 
 device = get_device()
 print(f"Using device: {device}")
+
+
+
+#####-----------------------------------#####
+#### Geospatial Data Science Environment: ###
+#####-----------------------------------#####
+
+conda create -n geospatial_data python=3.11 -c conda-forge -y
+conda activate geospatial_data
+conda install -c conda-forge geopandas rasterio rioxarray shapely pyproj fiona gdal geos proj -y
+conda install -c conda-forge numpy pandas scipy matplotlib seaborn scikit-learn statsmodels jupyterlab spyder ipykernel -y
+conda install -c conda-forge xarray netcdf4 h5py zarr -y
+python -m ipykernel install --user --name=geospatial_data --display-name "Python 3.11 (Geospatial Data Science)"
+conda install -c conda-forge contextily folium earthaccess pystac-client planetary-computer -y
+conda install -c conda-forge dask distributed -y
+conda install -c conda-forge folium ipyleaflet -y
+
+## for GEE work
+python -m pip install earthengine-api
+
+
