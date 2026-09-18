@@ -34,14 +34,14 @@ jupyter kernelspec remove (name of kernel)
 
 
 #####--------------------------------------------------- #####
-#### PyTorch environment with CUDA 12.8 for Blackwell GPU: ###
+#### PyTorch environment with CUDA 13.2 for Blackwell GPU: ###
 #####--------------------------------------------------- #####
 
 conda create -n torch_cuda python=3.11 -y
 conda activate torch_cuda
-python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu132
 python -m pip install numpy pandas scipy matplotlib seaborn scikit-learn statsmodels jupyterlab spyder ipykernel
-python -m ipykernel install --user --name torch_cuda --display-name "Python 3.11 (PyTorch CUDA)"
+python -m ipykernel install --user --name torch_cuda --display-name "Python 3.11 (PyTorch CUDA 13.2)"
 
 
 ### test the environment before launching jupyter:
@@ -68,6 +68,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # simple GPU calculation:
 x = torch.randn(5000, 5000, device="cuda")
 print(x.mean())
+
 
 #####-------------------------------------#####
 #### PyTorch environment for Intel Arc GPU: ###
@@ -109,7 +110,6 @@ def get_device():
 
 device = get_device()
 print(f"Using device: {device}")
-
 
 
 #####-----------------------------------#####
